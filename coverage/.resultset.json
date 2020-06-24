@@ -1,32 +1,7 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/Users/joselopez/Desktop/ruby/enigma/lib/bob.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/joselopez/Desktop/ruby/enigma/test/man_test.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null,
-          1,
-          2,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/joselopez/Desktop/ruby/enigma/lib/man.rb": {
+      "/Users/joselopez/Desktop/ruby/enigma/lib/enigma.rb": {
         "lines": [
           1,
           null,
@@ -34,6 +9,6 @@
         ]
       }
     },
-    "timestamp": 1592858805
+    "timestamp": 1593018331
   }
 }
