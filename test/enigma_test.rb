@@ -11,4 +11,24 @@ describe Enigma do
   it "should be the whole alphabet with a space at the end" do
     expect(enigma.alphabet).to eq(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "])
   end
+
+  it "should return us a random 5 digit number with the first number being 0 every time" do
+    enigma.create_key
+
+    expect(enigma.key.to_s.length).to eq(4)
+  end
+
+  it "should return 2 sets of numbers per key" do
+    enigma.create_key
+    enigma.key_one
+    enigma.key_two
+    enigma.key_three
+    enigma.key_four
+
+
+    expect(enigma.key_a).to be_kind_of(Integer)
+    expect(enigma.key_b).to be_kind_of(Integer)
+    expect(enigma.key_c).to be_kind_of(Integer)
+    expect(enigma.key_d).to be_kind_of(Integer)
+  end
 end
