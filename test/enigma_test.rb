@@ -2,7 +2,7 @@ require "test_helper.rb"
 require_relative "../lib/enigma.rb"
 
 describe Enigma do
-  let(:enigma) {Enigma.new}
+  let(:enigma) {Enigma.new(03072020)}
 
   it "should exist" do
     expect(enigma).to be_kind_of(Enigma)
@@ -30,5 +30,14 @@ describe Enigma do
     expect(enigma.key_b).to be_kind_of(Integer)
     expect(enigma.key_c).to be_kind_of(Integer)
     expect(enigma.key_d).to be_kind_of(Integer)
+  end
+
+  it "should return 4 offsets" do
+    enigma.offsets
+
+    expect(enigma.offset_a).to eq(8)
+    expect(enigma.offset_b).to eq(7)
+    expect(enigma.offset_c).to eq(3)
+    expect(enigma.offset_d).to eq(6)
   end
 end
