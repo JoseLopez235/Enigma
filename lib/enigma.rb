@@ -1,5 +1,5 @@
 class Enigma
-  attr_reader :alphabet, :key, :key_a, :key_b, :key_c, :key_d, :offset_a, :offset_b, :offset_c, :offset_d
+  attr_reader :alphabet, :key, :key_a, :key_b, :key_c, :key_d, :offset_a, :offset_b, :offset_c, :offset_d, :shift_a, :shift_b, :shift_c, :shift_d
   def initialize(date)
     @date = date.to_i
     @alphabet = ("a".."z").to_a << " "
@@ -12,6 +12,10 @@ class Enigma
     @offset_b = nil
     @offset_c = nil
     @offset_d = nil
+    @shift_a = nil
+    @shift_b = nil
+    @shift_c = nil
+    @shift_d = nil
   end
 
   def create_key
@@ -51,5 +55,12 @@ class Enigma
     @offset_b = num[1]
     @offset_c = num[2]
     @offset_d = num[3]
+  end
+
+  def final_shift
+    @shift_a = @key_a + @offset_a
+    @shift_b = @key_b + @offset_b
+    @shift_c = @key_c + @offset_c
+    @shift_d = @key_d + @offset_d
   end
 end

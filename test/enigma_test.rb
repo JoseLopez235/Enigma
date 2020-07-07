@@ -40,4 +40,20 @@ describe Enigma do
     expect(enigma.offset_c).to eq(3)
     expect(enigma.offset_d).to eq(6)
   end
+
+  it "should give final shift" do
+    enigma.create_key
+    enigma.key_one
+    enigma.key_two
+    enigma.key_three
+    enigma.key_four
+    enigma.offsets
+    enigma.final_shift
+
+
+    expect(enigma.shift_a).to be_kind_of(Integer)
+    expect(enigma.shift_b).to be_kind_of(Integer)
+    expect(enigma.shift_c).to be_kind_of(Integer)
+    expect(enigma.shift_d).to be_kind_of(Integer)
+  end
 end
